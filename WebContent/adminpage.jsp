@@ -36,8 +36,10 @@ background-color:#99FF33;
            <div id="menu">
     
             <ul >
-                 <li style="text-align:center;width:150px;font-size:40px"><a href="AddUser.jsp" style="text-decoration:none">Register</a></li>
-                 <li style="text-align:center;width:150px;font-size:40px"><a href="Login.jsp" style="text-decoration:none">Login</a></li>
+                 <li style="text-align:center;width:200px;font-size:20px"><a href="AddBook.jsp" style="text-decoration:none">Add Books</a></li>
+                <li style="text-align:center;width:200px;font-size:20px"><a href="SearchBook.jsp" style="text-decoration:none">Search Books</a></li>
+                <li style="text-align:center;width:200px;font-size:20px"><a href="Download.jsp" style="text-decoration:none">Download Books</a></li>
+                <li style="text-align:center;width:200px;font-size:20px"><a href="Login.jsp" style="text-decoration:none">Logout</a></li>
                 
             </ul>
             

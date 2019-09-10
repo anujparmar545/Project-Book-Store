@@ -35,7 +35,6 @@
 
 </head>
 <body>
-   
 
 				<form action ="UserAdd" method="post" style="margin-left: 200px;font-size: 16px;" >
 				<b>	
@@ -92,7 +91,6 @@
 
 				</form>
 			
-
 
 </body>
 </html>
