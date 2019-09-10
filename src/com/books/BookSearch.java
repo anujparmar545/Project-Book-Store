@@ -52,14 +52,15 @@ public class BookSearch extends HttpServlet {
 	ResultSet rs=pst.executeQuery();
 	
 	PrintWriter out=response.getWriter();
+	
 	out.println("<table BORDER=1 CELLPADDING=10 CELLSPACING=0 WIDTH=100% >"
 			+ "<tr><th>BOOK ID</th><th>BOOK NAME</th><th>SUBJECT</th><th>AUTHOR</th><th>PRICE</th></tr>");
 	
-	out.println("hitcount "+hitCount+"<br/>");
+	//out.println("hitcount "+hitCount+"<br/>");
 	while(rs.next())
 	{
 		int fakeprice=0;
-		double fakeprice2;
+		int fakeprice2;
 		
 	
 		if(hitCount>2&& hitCount<=4)
@@ -76,7 +77,7 @@ public class BookSearch extends HttpServlet {
 		else if(hitCount>4)
 		{
 			fakeprice=Integer.parseInt(rs.getString(5));
-			fakeprice2=fakeprice+fakeprice*0.2;
+			fakeprice2=(int)(fakeprice+fakeprice*0.2);
 		out.println("<tr><td><center>"+rs.getInt(1)+"</center></td>"
 				+ "<td><center>"+rs.getString(2)+"</center></td>"
 						+ "<td><center>"+rs.getString(3)+"</center></td>"

@@ -5,6 +5,8 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +14,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 /**
  * Servlet implementation class BookListServlet
@@ -21,7 +25,12 @@ public class BookListServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		HttpSession session=request.getSession();
 		String subject=request.getParameter("subject");
+		
+		Map<String, Integer> map=new HashMap<String, Integer>();
+		session.setAttribute("map", map);
+		
 		PrintWriter out=response.getWriter();
 		try{
 		Connection con=Connect.getConn();
@@ -37,7 +46,7 @@ public class BookListServlet extends HttpServlet {
 			String code=rs.getString(1);
 			String title=rs.getString(2);
 			
-			out.println("<a href=BookDetailsServlet?code="+code+">");
+			out.println("<a href=BookDetailsServlet?code="+code+"&currentuser="+session.getAttribute("username")+">");
 			out.println(title);
 			out.println("</a><br>");
 		}

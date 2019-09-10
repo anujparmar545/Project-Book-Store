@@ -14,7 +14,6 @@
 				s2=c.getValue();
 			}
 		}
-	
 
 %>
 
@@ -25,19 +24,19 @@
 <title>Log In</title>
 </head>
 <body>
-<h3>Online Book Store</h3>
-	<hr>
+<h4>Online Book Store</h4>
+	<hr><b>
 	<form action="VerifyUser">
 	<pre>
-		Username		<input type="text" name="username" value="<%=s1%>"  />
-		Password	<input type="password" name="password" value="<%=s2%>"  />
-		RememberMe	<input type="checkbox" name="save" value="yes" checked="checked" />
-		Usertype	owner	<input type="radio" name="utype" value="owner" checked="checked"/>
-				buyer 	<input type="radio" name="utype" value="buyer"/>
+		Username		<input type="text" name="username" value="<%=s1%>"  /><br>
+		Password		<input type="password" name="password" value="<%=s2%>"  /><br>
+		RememberMe		<input type="checkbox" name="save" value="yes" checked="checked" /><br>
+		Usertype	owner	<input type="radio" name="utype" value="owner" checked="checked"/>    buyer <input type="radio" name="utype" value="buyer"/>
+					
 					<input type="submit" value="Login"/>
 	</pre>
 	</form>
-	<hr>
+	<hr></b>
 	<a href="registration.jsp">New-User</a>
 </body>
 </html>

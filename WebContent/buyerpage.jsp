@@ -3,8 +3,8 @@
 <title>Buyer page</title>
 </head>
 <body>
-
-<h3>DashBoard-For-Buyer</h3>
+<%String s=(String)session.getAttribute("username"); %>
+<h3>DashBoard-For-<%=s %></h3>
 	<hr>
 	<pre>
 		<a href="SubjectPageServlet">Explore-Store</a>

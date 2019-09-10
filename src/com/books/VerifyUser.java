@@ -13,6 +13,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class VerifyUser
@@ -28,6 +29,10 @@ public class VerifyUser extends HttpServlet {
 		String username=request.getParameter("username");
 		String password=request.getParameter("password");
 		String utype=request.getParameter("utype");
+		
+		HttpSession session=request.getSession();
+		session.setAttribute("username", username);
+		
 		try{
 			if(utype.equals("owner")){
 				if(username.equals("admin") && password.equals("admin")){
