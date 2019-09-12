@@ -24,6 +24,7 @@ public class BookAdd extends HttpServlet {
 		String author=request.getParameter("txtAuthor");
 		String price=request.getParameter("txtPrice");
 		
+		response.setContentType("text/html");
 		System.out.println(bookname+" "+subject+" "+author+" "+price);
 		
 		try {
@@ -43,6 +44,8 @@ public class BookAdd extends HttpServlet {
 		
 		PrintWriter out=response.getWriter();
 		out.println("Book Added");
+		
+		out.println("<br><a href=\"adminpage.jsp\">Dashboard</a>");
 	
 	}
 

@@ -97,6 +97,9 @@ public class BookDetailsServlet extends HttpServlet {
 								+ "</tr>");
 			}
 		out.println("</table>");
+		out.println("<br><br>");
+		out.println("<a href=\"CartManager?bookid="+bookid+"&currentuser="+currentuser+"\">Add To Cart</a>");
+		out.println("<br><a href=\"SubjectPageServlet\">Subject Page</a>");
 		
 		}
 			}

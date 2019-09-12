@@ -94,6 +94,7 @@ public class BookSearch extends HttpServlet {
 							+ "</tr>");
 	}
 	out.println("</table>");
+	out.println("<br><a href=\"buyerpage.jsp\">Dashboard</a>");
 	}
 	
 	
